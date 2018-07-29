@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class PostController
+class WorldLocationModel
 {
     public function __construct()
     {

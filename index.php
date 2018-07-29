@@ -1,6 +1,6 @@
 <?
 
-use \App\Controllers\PostController;
+use \App\Controllers\WorldLocationController;
 use \FastRoute\RouteCollector;
 
 require_once './vendor/autoload.php';
@@ -8,7 +8,7 @@ require_once './vendor/autoload.php';
 $dispatcher = \FastRoute\simpleDispatcher(function (RouteCollector $r) {
 
     $r->addGroup('/post', function (RouteCollector $r) {
-        $postController = new PostController();
+        $postController = new WorldLocationController();
 
         $r->addRoute('GET', '/list', function ($params) use ($postController) {
             return $postController->getList($params);
